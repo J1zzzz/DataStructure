@@ -503,9 +503,8 @@ void changePointer(int *p) {
 - 在 `changePointer` 函数中，通过一层指针可以成功修改指针指向的值。
 
 
-好的，我将为你生成一个简洁的Markdown文件，只包含函数声明和部分重要的代码片段。以下是内容：
 
-```markdown
+
 # 链栈的实现
 
 ## 代码
