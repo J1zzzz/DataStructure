@@ -136,7 +136,6 @@ int main() {
 - 如果需要插入更多数据，可以在 `initializeData` 函数中添加更多 `InsertIntoBSTree` 调用。
 
 
-以下是一个为你的链表操作代码生成的 `README.md` 文档。它将详细介绍代码的功能、结构和如何运行代码。
 
 ---
 
@@ -264,7 +263,6 @@ int main() {
 - 确保在使用完链表后调用 `DestroyList` 函数释放内存，避免内存泄漏。
 - 如果需要插入更多数据，可以在 `Initialize` 函数中添加更多 `InsertHead` 或 `InsertTail` 调用。
 
-以下是一个为你的线索二叉树代码生成的 `README.md` 文档。它将详细介绍代码的功能、结构和如何运行代码。
 
 ---
 
@@ -390,7 +388,6 @@ void InOrderThraverse_Thr(BiThrTree p);
 - 确保输入的二叉树结构正确，空结点用 `#` 表示。
 - 如果需要测试更多数据，可以在 `main` 函数中添加更多测试用例。
 
-以下是一个为你的代码生成的 `README.md` 文档。它将详细介绍代码的功能、结构和如何运行代码，同时解释代码中涉及的指针操作。
 
 ---
 
@@ -504,6 +501,137 @@ void changePointer(int *p) {
 - 在 `changeValue` 函数中，通过二层指针可以成功修改指针指向的值。
 - 在 `changeValue2` 函数中，尝试修改指针本身的值，但由于传递的是指针的副本，因此不会影响原始指针。
 - 在 `changePointer` 函数中，通过一层指针可以成功修改指针指向的值。
+
+
+好的，我将为你生成一个简洁的Markdown文件，只包含函数声明和部分重要的代码片段。以下是内容：
+
+```markdown
+# 链栈的实现
+
+## 代码
+
+### 数据结构
+```c
+typedef int ElementType;
+typedef struct node {
+    ElementType data;
+    struct node *next;
+} StackNode;
+
+typedef struct stack {
+    StackNode *top;
+} Stack;
+```
+
+### 函数声明
+```c
+void InitStack(Stack *s);
+bool IsEmptyStack(Stack *s);
+void DestroyStack(Stack *s);
+void PushStack(Stack *s, ElementType data_element);
+void PopStack(Stack *s);
+void DisplayStack(Stack *s);
+```
+
+### 主函数
+```c
+int main() {
+    Stack s;
+    InitStack(&s);
+    PushStack(&s, 1);
+    PushStack(&s, 2);
+    PopStack(&s);
+    DisplayStack(&s);
+    DestroyStack(&s);
+    return 0;
+}
+```
+
+### 重要代码片段
+
+#### 初始化栈
+```c
+void InitStack(Stack *s) {
+    s->top = NULL;
+}
+```
+
+#### 判断栈是否为空
+```c
+bool IsEmptyStack(Stack *s) {
+    return s->top == NULL;
+}
+```
+
+#### 进栈操作
+```c
+void PushStack(Stack *s, ElementType data_element) {
+    StackNode *p = (StackNode *)malloc(sizeof(StackNode));
+    p->data = data_element;
+    p->next = s->top;
+    s->top = p;
+}
+```
+
+#### 出栈操作
+```c
+void PopStack(Stack *s) {
+    if (IsEmptyStack(s)) {
+        printf("Stack is empty\n");
+        return;
+    }
+    StackNode *p = s->top;
+    printf("Element in the stack on the top: %d\n", p->data);
+    s->top = p->next;
+    free(p);
+}
+```
+
+#### 显示栈内容
+```c
+void DisplayStack(Stack *s) {
+    if (IsEmptyStack(s)) {
+        printf("Stack is empty\n");
+        return;
+    }
+    StackNode *p = s->top;
+    while (p != NULL) {
+        printf("%d ", p->data);
+        p = p->next;
+    }
+    printf("\n");
+}
+```
+
+#### 销毁栈
+```c
+void DestroyStack(Stack *s) {
+    while (s->top != NULL) {
+        StackNode *p = s->top;
+        s->top = s->top->next;
+        free(p);
+    }
+}
+```
+
+## 示例输出
+```
+Element in the stack on the top: 2
+1 
+```
+
+## 代码说明
+- **`InitStack`**：初始化链栈，将栈顶指针设置为`NULL`。
+- **`IsEmptyStack`**：判断链栈是否为空。
+- **`PushStack`**：将一个新元素压入栈顶。
+- **`PopStack`**：弹出栈顶元素并输出其值。
+- **`DisplayStack`**：按栈顶顺序输出链栈中的所有元素。
+- **`DestroyStack`**：释放链栈占用的内存。
+
+## 注意事项
+- 在程序结束时，建议调用`DestroyStack`函数释放链栈占用的内存，避免内存泄漏。
+```
+
 
 ## 作者
 
