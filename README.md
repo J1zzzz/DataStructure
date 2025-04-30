@@ -1,7 +1,5 @@
 # DataStructure
-Data Structures And Algorithms ,All base structure in this course
-以下是一个为你的二叉搜索树（BST）代码生成的 `README.md` 文档。它将详细介绍代码的功能、结构和如何运行代码。
-
+Data Structures And Algorithms ,All base structure in this course.
 ---
 
 # 二叉搜索树（BST）实现
