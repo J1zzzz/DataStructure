@@ -1,6 +1,162 @@
 # DataStructure
+
+### By Jzzzz
+
 Data Structures And Algorithms ,All base structure in this course.
 ---
+
+
+# Huffman Coding Implementation in C
+
+This repository contains a simple implementation of Huffman Coding in C. Huffman Coding is a popular data compression algorithm that uses a variable-length encoding system to encode data. It assigns shorter codes to more frequently occurring characters and longer codes to less frequently occurring characters.
+
+## Features
+
+- **Dynamic Huffman Tree Construction**: The program constructs a Huffman tree dynamically based on the frequency of characters.
+- **Character Encoding**: It generates Huffman codes for each character in the input.
+- **Efficient Compression**: The algorithm provides efficient compression by reducing the overall size of the encoded data.
+
+## Table of Contents
+
+- [Prerequisites](#prerequisites)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Algorithm](#algorithm)
+- [Example](#example)
+- [Contributing](#contributing)
+- [License](#license)
+
+## Prerequisites
+
+To run this program, you need to have a C compiler installed on your system. You can use GCC or any other C compiler.
+
+## Installation
+
+Since this is a simple C program, there is no specific installation process. Just download the source code and compile it using your C compiler.
+
+## Usage
+
+1. **Compile the Program**:
+   ```bash
+   gcc -o huffmanCoding huffman_coding.c
+   ```
+
+2. **Run the Program**:
+   ```bash
+   ./huffmanCoding
+   ```
+
+## Algorithm
+
+The program uses the following steps to construct the Huffman tree and generate Huffman codes:
+
+1. **Create a Min Heap**: Initialize a min heap with nodes representing each character and its frequency.
+2. **Build the Huffman Tree**:
+   - While there is more than one node in the heap:
+      - Extract the two nodes with the smallest frequencies.
+      - Create a new internal node with these two nodes as children and with frequency equal to the sum of the two nodes' frequencies.
+      - Add the new node to the heap.
+   - The remaining node is the root node of the Huffman tree.
+3. **Generate Huffman Codes**: Traverse the Huffman tree to generate Huffman codes for each character.
+
+## Example
+
+The program includes a sample input with characters and their frequencies. Here's how the program works:
+
+- Characters: `a, b, c, d, e, f`
+- Frequencies: `5, 9, 12, 13, 16, 45`
+
+The program constructs a Huffman tree and prints the Huffman codes for each character.
+
+## Contributing
+
+Contributions are welcome! If you find any issues or want to add new features, feel free to open an issue or create a pull request.
+
+
+
+好的，我将在README文档中添加哈夫曼树的图形表示。以下是更新后的中文README文档：
+
+# C语言实现哈夫曼树
+
+本项目提供了一个用C语言编写的哈夫曼树构造程序，哈夫曼树是一种在数据压缩算法中使用的基础数据结构。哈夫曼树是一种完全二叉树，它最小化了从根节点到所有其他节点的加权路径长度。
+
+## 功能特点
+
+- **动态构造哈夫曼树**：程序根据给定的节点权重动态构造哈夫曼树。
+- **节点选择**：包括一个函数来选择尚未分配父节点的两个最小权重节点。
+- **先序遍历**：程序使用先序遍历打印哈夫曼树结构。
+
+## 目录
+
+- [环境要求](#环境要求)
+- [安装](#安装)
+- [使用](#使用)
+- [算法](#算法)
+- [示例](#示例)
+- [哈夫曼树图形](#哈夫曼树图形)
+- [贡献](#贡献)
+- [许可证](#许可证)
+
+## 环境要求
+
+要运行此程序，您需要在系统上安装C编译器。您可以使用GCC或任何其他C编译器。
+
+## 安装
+
+由于这是一个简单的C程序，没有特定的安装过程。只需下载源代码并使用您的C编译器编译它。
+
+## 使用
+
+1. **编译程序**：
+   ```bash
+   gcc -o huffman_tree huffman_tree.c
+   ```
+
+2. **运行程序**：
+   ```bash
+   ./huffman_tree
+   ```
+
+## 算法
+
+程序使用以下步骤构造哈夫曼树：
+
+1. **初始化哈夫曼树**：创建一个数组来表示哈夫曼树，初始化所有节点的权重为零，没有父节点或子节点。
+2. **分配权重**：根据输入数组为前`n`个节点分配权重。
+3. **构造树**：
+   - 对于每个新节点`i`从`n+1`到`2*n-1`：
+      - 选择两个尚未分配父节点的最小权重节点。
+      - 将这两个节点分配为新节点`i`的左和右子节点，并设置这两个节点的父节点为`i`。
+      - 计算新节点的权重为其子节点权重之和。
+4. **打印哈夫曼树**：使用先序遍历打印哈夫曼树的结构。
+
+## 示例
+
+程序包括一个具有4个节点及其相应权重的示例输入。以下是程序的工作方式：
+
+- 节点数：4
+- 权重：`[10, 20, 30, 40]`
+
+程序构造一个哈夫曼树并使用先序遍历打印树的结构。
+
+## 哈夫曼树图形
+
+根据上述权重，构造的哈夫曼树结构如下：
+
+```
+        100
+       /  \
+     60    40
+    /  \
+   30  30
+  / \
+10  20
+```
+
+## 贡献
+
+欢迎贡献！如果您发现任何问题或想要添加新功能，请随时提出问题或创建拉取请求。
+
 
 # 二叉搜索树（BST）实现
 
