@@ -2,13 +2,14 @@
 
 ### By Jzzzz
 
+## Recommended Websites for Data Structure Diagrams
+- [All Structures Diagrams](https://www.cs.usfca.edu/~galles/visualization/Algorithms.html)
+- [Code Visualization](https://pythontutor.com)
+- [Interactive dynamic demonstration](https://visualgo.net)
+
+
 Data Structures And Algorithms ,All base structure in this course.
 ---
-## Recommended Websites for Data Structure Diagrams
-[All Structures Diagrams](https://www.cs.usfca.edu/~galles/visualization/Algorithms.html)
-[Code Visualization](https://pythontutor.com)
-[Interactive dynamic demonstration](https://visualgo.net)
-
 # Huffman Coding Implementation in C
 
 This repository contains a simple implementation of Huffman Coding in C. Huffman Coding is a popular data compression algorithm that uses a variable-length encoding system to encode data. It assigns shorter codes to more frequently occurring characters and longer codes to less frequently occurring characters.
