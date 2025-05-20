@@ -4,7 +4,10 @@
 
 Data Structures And Algorithms ,All base structure in this course.
 ---
-
+## Recommended Websites for Data Structure Diagrams
+[All Structures Diagrams](https://www.cs.usfca.edu/~galles/visualization/Algorithms.html)
+[Code Visualization](https://pythontutor.com)
+[Interactive dynamic demonstration](https://visualgo.net)
 
 # Huffman Coding Implementation in C
 
